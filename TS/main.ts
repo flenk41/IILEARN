@@ -1,26 +1,41 @@
-// 1 задача
+let PriceArray: number[] = [1, 2, 3, 4, 5];
 
-function calculateBalance(dohod: number, razhod: number): number {
-    return dohod - razhod;
+PriceArray.push(10);
+PriceArray[1] = 10;
+PriceArray.pop();
+console.log(PriceArray.length);
+for (let index = 0; index < PriceArray.length; index++) {
+    console.log(PriceArray[index]);
 }
 
-function canBuy(balance: number, price: number, isAvalible: boolean): boolean {
+// 2
 
+let Mass: number[] = [1, 2, 3, 4, 5, 6];
+let sum: number = 0;
+let even: number = 0;
+let maxelem: number = 0;
+
+for (let numb of Mass) {
+    sum += numb;
+    if (numb % 2 === 0) {
+        even += 1;
+    }
+    if (maxelem < numb) {
+        maxelem = numb;
+    }
 }
 
-function formatTransaction(NameTrans: string, summ: number, other: string): string {
-    return NameTrans;
-}
+// 3
 
-const summ = (number: number, numbers: number): number => {
-    return number + numbers;
-};
+const Fintech: number[] = [100, -20, 300, 400, -10];
 
-const minus = (number: number, numbers: number): number => {
-    return number - numbers;
-};
+const razhodi: number[] = Fintech.filter(balance => balance < 0);
 
-function calculet(callbackminus: (onenumber: number, twonumber: number) => number, callbackplus: (number1: number, number2: number) => number) {
+const absoluteValues: number[] = Fintech.map(num => Math.abs(num));
 
-}
+const Findes = Fintech.find(num => num < -1000);
+
+
+// 4
+
 
