@@ -1,41 +1,70 @@
-let PriceArray: number[] = [1, 2, 3, 4, 5];
+type Game = {
+    name: string;
+    price: number;
+    isAvalible: boolean;
+};
 
-PriceArray.push(10);
-PriceArray[1] = 10;
-PriceArray.pop();
-console.log(PriceArray.length);
-for (let index = 0; index < PriceArray.length; index++) {
-    console.log(PriceArray[index]);
-}
+const FirstGame: Game = {
+    name: "GoodOFWar",
+    price: 100,
+    isAvalible: true
+};
+
+const TwoGame: Game = {
+    name: "CSGO",
+    price: 300,
+    isAvalible: false
+};
+
+console.log(FirstGame, TwoGame);
+
 
 // 2
+interface Transaction {
+    id: number;
+    name: string;
+    amount: number;
+    category: string;
+}
 
-let Mass: number[] = [1, 2, 3, 4, 5, 6];
-let sum: number = 0;
-let even: number = 0;
-let maxelem: number = 0;
+const trans: Transaction[] = [
+    {
+        id: 1,
+        name: "Покупка",
+        amount: 1500,
+        category: "Доход"
+    },
+    {
+        id: 2,
+        name: "Покупка",
+        amount: 4500,
+        category: "Доход"
+    }
+];
 
-for (let numb of Mass) {
-    sum += numb;
-    if (numb % 2 === 0) {
-        even += 1;
-    }
-    if (maxelem < numb) {
-        maxelem = numb;
-    }
+for (let num of trans) {
+    console.log(num);
 }
 
 // 3
 
-const Fintech: number[] = [100, -20, 300, 400, -10];
+interface Product {
+    name: string;
+    price: number;
+    discount?: number;
+}
 
-const razhodi: number[] = Fintech.filter(balance => balance < 0);
+function getFinalPrice(prod: Product): number {
+    if (prod.discount !== 0 && prod.discount !== undefined) {
+        return prod.price * (1 - prod.discount / 100);
+    }
+    else {
+        return prod.price;
+    }
+}
 
-const absoluteValues: number[] = Fintech.map(num => Math.abs(num));
-
-const Findes = Fintech.find(num => num < -1000);
-
-
-// 4
-
+const item: Product = { name: "Ноутбук", price: 5000 };
+console.log(getFinalPrice(item));
+const item2: Product = { name: "ПК", price: 65000, discount: 15 };
+console.log(getFinalPrice(item2));
 
