@@ -1,14 +1,51 @@
-const MYname: string = "Name";
-const Years: number = 22;
-const Status: string = "Active";
+let gameName: string = "GOD";
+let pricegame: number = 200;
+let Userbalance: number = 100;
+let isAvalible: boolean = true;
 
+if (Userbalance >= pricegame) {
+    console.log("Покупка разрешена");
+}
+else if (isAvalible !== true) {
+    console.log("Игра не доступна");
+}
+else {
+    console.log("Недостаточно денег");
+}
+
+
+// 3 задача
+const username: string = "Flenk";
 let balance: number = 5000;
-balance = 4500;
+const isOnline: boolean = true;
 
-let gamename = "FIFA26";
-let gameSell = 25;
-let gameStatus = "Active";
+let age: number = 21;
+age = 22;
 
-const userAge: number = "21"; // записываем как строку
-let gameName: string = 100; // тут записываем как число
-const isOnline: boolean = "true"; // bool это либо 0 либо 1 или true and false
+const price: number = 1000;
+const usBalance: number = 500;
+
+if (usBalance >= price) {
+    console.log("Денег достаточно");
+}
+
+// 4 задача
+
+let score: number = 50;
+
+if (score < 100 && score > 90) {
+    console.log("Отлично");
+}
+else if (score > 70 && score < 89) {
+    console.log("Хорошо");
+}
+else if (score > 50 && score < 69) {
+    console.log("Зачет");
+}
+else if (score < 50) {
+    console.log("Не зачет");
+}
+else {
+    console.log("Некорректный результат");
+}
+// 5 
